@@ -1,13 +1,13 @@
 {
-  "name": "Textern",
-  "description": "Edit text in your favourite external editor!",
-  "homepage_url": "https://github.com/jlebon/textern",
+  "name": "Textern (aozdemir)",
+  "description": "Edit text in your favourite external editor! A tiny patch to Jonathan Lebon's textern.",
+  "homepage_url": "https://github.com/alex-ozdemir/textern",
   "manifest_version": 2,
-  "version": "0.7",
+  "version": "0.8",
 
   "applications": {
     "gecko": {
-      "id": "textern@jlebon.com",
+      "id": "textern@aozdemir.org",
       "strict_min_version": "53.0"
     }
   },

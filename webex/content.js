@@ -83,7 +83,7 @@ function registerText(event) {
         var id = watchElement(e);
         /* don't use href directly to not bring in e.g. url params */
         var simple_url = window.location.hostname + window.location.pathname
-        browser.runtime.sendMessage("textern@jlebon.com", {
+        browser.runtime.sendMessage("textern@aozdemir.org", {
             type: "register_text",
             id: id,
             text: e.value,
@@ -94,7 +94,7 @@ function registerText(event) {
         var id = watchElement(e);
         /* don't use href directly to not bring in e.g. url params */
         var simple_url = window.location.hostname + window.location.pathname
-        browser.runtime.sendMessage("textern@jlebon.com", {
+        browser.runtime.sendMessage("textern@aozdemir.org", {
             type: "register_text",
             id: id,
             // we use GMail's innerText b/c it has simple (non-HTML) output.
@@ -153,7 +153,7 @@ function setText(id, text) {
 }
 
 function onMessage(message, sender, respond) {
-    if (sender.id != "textern@jlebon.com")
+    if (sender.id != "textern@aozdemir.org")
         return;
     if (message.type == "set_text")
         setText(message.id, message.text);

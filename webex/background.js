@@ -114,7 +114,7 @@ function handleRegisterText(tabId, message) {
 }
 
 function onMessage(message, sender, respond) {
-    if (sender.id != "textern@jlebon.com")
+    if (sender.id != "textern@aozdemir.org")
         return;
     var tabId = sender.tab.id;
     if (message.type == "register_text")
