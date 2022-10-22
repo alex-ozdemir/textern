@@ -47,7 +47,11 @@ function isGmailMessageBody(e) {
 }
 
 function textToGmailHtml(string) {
-    return string.replaceAll(" ", "&nbsp;").replaceAll("\n", "<br>")
+    return string
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll(" ", "&nbsp;")
+        .replaceAll("\n", "<br>");
 }
 
 function textFromSlackMessageDiv(e) {
