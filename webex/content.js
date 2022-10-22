@@ -54,6 +54,11 @@ function textToGmailHtml(string) {
         .replaceAll("\n", "<br>");
 }
 
+function gmailInnerTextToText(string) {
+    return string
+        .replaceAll("\u00A0", " ");
+}
+
 function textFromSlackMessageDiv(e) {
     /* each line is a different <p> element */
     var text = "";
@@ -99,7 +104,7 @@ function registerText(event) {
             id: id,
             // we use GMail's innerText b/c it has simple (non-HTML) output.
             // using innerHTML would correctly capture spacing, but also brings other junk.
-            text: isSlackMessage(e) ? textFromSlackMessageDiv(e) : e.innerText,
+            text: isSlackMessage(e) ? textFromSlackMessageDiv(e) : isGmailMessageBody(e) ? gmailInnerTextToText(e.innerText) : e.innerText,
             caret: 0,
             url: simple_url
         }).then(assertNoResponse, logError);
