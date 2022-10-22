@@ -3,7 +3,7 @@
   "description": "Edit text in your favourite external editor! A tiny patch to Jonathan Lebon's textern.",
   "homepage_url": "https://github.com/alex-ozdemir/textern",
   "manifest_version": 2,
-  "version": "0.9",
+  "version": "0.10",
 
   "applications": {
     "gecko": {
